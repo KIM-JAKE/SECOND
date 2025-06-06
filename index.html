@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MMPB: It's Time for Multi-Modal Personalization.">
-  <meta name="keywords" content="MMPB">
+        content="SECOND: Mitigating Perceptual Hallucination in Vision-Language Models via Selective and Contrastive Decoding">
+  <meta name="keywords" content="SECOND">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MMPB: It's Time for Multi-Modal Personalization</title>
+  <title>SECOND: Mitigating Perceptual Hallucination in Vision-Language Models via Selective and Contrastive Decoding</title>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -157,20 +157,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MMPB: It's Time for Multi-Modal Personalization</h1>
+          <h1 class="title is-1 publication-title">SECOND: Mitigating Perceptual Hallucination in Vision-Language Models via Selective and Contrastive Decoding</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://github.com/MMPB-Benchmark">Anonymous (TBD)</a><sup>1</sup>,</span>
+              <a href="https://github.com/AIDASLab">Woohyeon Park</a><sup>1</sup>,</span>
+              <a href="https://github.com/AIDASLab">Woohyeon Park</a><sup>1</sup>,</span>
+              <a href="https://github.com/AIDASLab">Woohyeon Park</a><sup>1</sup>,</span>
+              <a href="https://github.com/AIDASLab">Woohyeon Park</a><sup>1</sup>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Earth</span>
+            <span class="author-block"><sup>1</sup>Seoul National University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://github.com/MMPB-Benchmark"
+                <a href="https://github.com/AIDASLab/SECOND"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -178,7 +181,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              </span>
+<!--               </span>
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/stackadd/MMPB" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -187,7 +190,7 @@
                   </span>
                   <span>Dataset</span>
                 </a>
-              </span>
+              </span> -->
 
             </div>
           </div>
@@ -197,7 +200,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
     <font size="5">
@@ -222,7 +225,7 @@
     </table>
   </font>
   </div>
-</section>
+</section> -->
 
   
 <section class="section">
@@ -232,15 +235,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first Visual-Question Answering (VQA) Benchmark for evaluating Vision-Lanugage assistant Models (VLMs) on Personalization!
-          </p>
-          <p>
-            MMPB comprises 10k image-query pairs and includes 111 personalizable concepts across four categories: Human, Animal, Object, and Character, with the human category enriched with preference-grounded queries. 
-            We structure personalization into three main task types: Awareness, Appropriateness, and Coherency
-            
-          </p>
-          <p>
-            Our findings indicate that most VLMs (including some closed-source models) struggle with personalization, particularly in maintaining consistency over dialogue, handling user preferences, and adapting to visual cues. Our analysis reveals that the challenges in VLM personalization (such as refusal behaviors and long-context forgetting) highlight substantial room for improvement. 
+            we propose SECOND: Selective and Contrastive Decoding, a novel approach that enables VLMs to effectively leverage multi-scale visual information with an object-centric manner, closely aligning with human visual perception.
           </p>
         </div>
       </div>
@@ -255,17 +250,16 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">Overview of MMPB</span></h2>
+        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">Overview of SECOND</span></h2>
         <div class="content">
-          Examples of personalized queries across task types and representative failure cases of recent VLMs.<br>
-          We highlight the lack of VQA benchmarks for effectively and extensively evaluating VLMs.
+          TBD
           <centering>
             <div style="text-align: center;">
               <img id="teaser" width="60%" src="images/mot_fig-1.png">      
             </div>
           </centering>
-          <br />(a) Some closed-source models exhibit evasive responses.  
-          <br />(b) Most VLMs fails to be personalized.
+<!--           <br />(a) Some closed-source models exhibit evasive responses.  
+          <br />(b) Most VLMs fails to be personalized. -->
         </div>
       </div>
     </div>
@@ -276,7 +270,7 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">Evaluation of widely used VLMs on MMPB</span></h2>
+        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">SECOND</span></h2>
         <div class="content">
 
           <centering>
@@ -291,261 +285,6 @@
   </div>
 </section>  
 
-
-<section class="section" id="interactive-table">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Benchmarking Results</h2>
-
-        <div class="filter-controls">
-          <button class="filter-btn active" data-filter="all">All Models</button>
-          <button class="filter-btn" data-filter="open">Open Models</button>
-          <button class="filter-btn" data-filter="closed">Closed Models</button>
-          <input type="text" class="search-box" placeholder="Search models...">
-        </div>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Model <button class="sort-btn" data-sort="name">↕</button></th>
-              <th>Text Turn 0 <button class="sort-btn" data-sort="text0">↕</button></th>
-              <th>Image Turn 0 <button class="sort-btn" data-sort="img0">↕</button></th>
-              <th>Text Turn 10 <button class="sort-btn" data-sort="text10">↕</button></th>
-              <th>Image Turn 10 <button class="sort-btn" data-sort="img10">↕</button></th>
-            </tr>
-          </thead>
-          <tbody>
-
-          <tr data-category="open">
-              <td>Ovis2-34B</td>
-              <td>76.2</td>
-              <td>72.4</td>
-              <td>66.1</td>
-              <td>62.0</td>
-          </tr>
-  
-          <tr data-category="open">
-              <td>Qwen2-VL-72B</td>
-              <td>73.0</td>
-              <td>71.9</td>
-              <td>68.5</td>
-              <td>60.0</td>
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>InternVL2.5-38B-MPO</td>
-              <td>72.2</td>
-              <td>66.3</td>
-              <td>63.7</td>
-              <td>46.4</td>
-            
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>Ovis2-16B</td>
-              <td>71.5</td>
-              <td>71.7</td>
-              <td>64.6</td>
-              <td>64.9</td>
-
-          </tr>
-
-          <tr data-category="open">
-              <td>Qwen2.5-VL-72B</td>
-              <td>70.4</td>
-              <td>68.1</td>
-              <td>63.9</td>
-              <td>57.9</td>
-
-          </tr>
-
-  
-          <tr data-category="closed">
-              <td>Claude-3.5-Sonnet</td>
-              <td>68.8</td>
-              <td>40.4</td>
-              <td>54.3</td>
-              <td>41.6</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>DeepSeek-VL-V2</td>
-              <td>68.2</td>
-              <td>56.0</td>
-              <td>58.5</td>
-              <td>60.9</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>LLaVA-OV-72B</td>
-              <td>67.4</td>
-              <td>58.7</td>
-              <td>61.4</td>
-              <td>56.5</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>Qwen2-VL-7B</td>
-              <td>66.6</td>
-              <td>60.6</td>
-              <td>62.9</td>
-              <td>59.1</td>
-
-          </tr>
-
-  
-          <tr data-category="closed">
-              <td>Gemini-2.0-Flash</td>
-              <td>66.5</td>
-              <td>66.4</td>
-              <td>58.4</td>
-              <td>52.2</td>
-
-          </tr>
-
-  
-          <tr data-category="closed">
-              <td>Gemini-1.5-Flash</td>
-              <td>66.4</td>
-              <td>64.1</td>
-              <td>61.4</td>
-              <td>56.2</td>
-
-          </tr>
-
-  
-          <tr data-category="closed">
-              <td>GPT-4o</td>
-              <td>66.1</td>
-              <td>49.1</td>
-              <td>64.7</td>
-              <td>50.0</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>InternVL2.5-26B-MPO</td>
-              <td>65.0</td>
-              <td>58.3</td>
-              <td>58.1</td>
-              <td>53.3</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>Ovis2-8B</td>
-              <td>64.5</td>
-              <td>62.6</td>
-              <td>60.2</td>
-              <td>58.4</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>Qwen2.5-VL-7B</td>
-              <td>62.7</td>
-              <td>59.1</td>
-              <td>57.6</td>
-              <td>55.0</td>
-
-          </tr>
-
-          <tr data-category="open">
-              <td>InternVL2.5-8B-MPO</td>
-              <td>60.6</td>
-              <td>61.4</td>
-              <td>56.3</td>
-              <td>55.2</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>Llama-3.2-11B</td>
-              <td>60.2</td>
-              <td>57.2</td>
-              <td>56.9</td>
-              <td>56.7</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>InternVL2.5-7B-MPO</td>
-              <td>60.0</td>
-              <td>51.6</td>
-              <td>47.2</td>
-              <td>40.9</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>LLaVA-NeXT-34B</td>
-              <td>57.8</td>
-              <td>59.4</td>
-              <td>52.4</td>
-              <td>52.9</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>LLaVA-NeXT-32B</td>
-              <td>57.5</td>
-              <td>54.9</td>
-              <td>58.6</td>
-              <td>55.4</td>
-
-          </tr>
-
-          <tr data-category="open">
-              <td>LLaVA-OV-7B</td>
-              <td>56.8</td>
-              <td>49.8</td>
-              <td>52.7</td>
-              <td>49.1</td>
-
-          </tr>
-
-  
-          <tr data-category="open">
-              <td>LLaVA-1.5-13B</td>
-              <td>53.0</td>
-              <td>54.5</td>
-              <td>50.3</td>
-              <td>50.4</td>
-
-          </tr>
-  
-          <tr data-category="closed">
-              <td>Claude-3.7-Sonnet</td>
-              <td>37.0</td>
-              <td>15.8</td>
-              <td>33.6</td>
-              <td>14.6</td>
-
-          </tr>
-
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
 
 <script>
   // Script for sort buttons
