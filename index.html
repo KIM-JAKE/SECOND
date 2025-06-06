@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MMPB: It's Time for Multi-Modal Personalization.">
+  <meta name="keywords" content="MMPB">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMPB: It's Time for Multi-Modal Personalization</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+<style>
+      .data-table {
+        width: 85%; /* Adjusted from 90% */
+        border-collapse: collapse;
+        margin: 25px auto; /* Centered table if width is less than 100% */
+        font-size: 0.9em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        overflow: hidden; /* Ensures border-radius is applied to corners */
+      }
+      
+      .data-table thead tr {
+        background-color: #3273dc; /* Bulma primary color */
+        color: #ffffff;
+        text-align: left;
+      }
+      
+      .data-table th,
+      .data-table td {
+        padding: 8px 10px; /* Adjusted from 12px 15px */
+        border-bottom: 1px solid #dddddd; /* Lighter border for rows */
+      }
+      
+      .data-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      
+      .data-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3; /* Zebra striping */
+      }
+      
+      .data-table tbody tr:last-of-type {
+        border-bottom: 2px solid #3273dc; /* Thicker border for the last row */
+      }
+      
+      .data-table tbody tr.active-row { /* Example style, not used in current JS */
+        font-weight: bold;
+        color: #3273dc;
+        background-color: #f0f8ff; /* Light blue for active row */
+      }
+      
+      .sort-btn { /* Style for sort buttons if added later */
+        background: none;
+        border: none;
+        padding: 0;
+        margin-left: 5px;
+        cursor: pointer;
+        color: white; /* Assuming it's in the header */
+      }
+      
+      .expand-btn { /* This style is kept for general use, though not in the interactive table */
+        background-color: #3273dc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .expand-btn:hover {
+        background-color: #276cda; /* Darker shade on hover */
+      }
+      
+      
+      /* Styles for filter controls (not yet implemented in HTML structure) */
+      .filter-controls {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center; /* Center filter buttons */
+      }
+      
+      .filter-btn {
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 8px 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      
+      .filter-btn:hover, .filter-btn.active {
+        background-color: #3273dc;
+        color: white;
+      }
+      
+      .search-box { /* Style for a search box if added later */
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        /* margin-left: auto; Removed to allow centering with other controls */
+        width: 200px;
+      }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MMPB: It's Time for Multi-Modal Personalization</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/MMPB-Benchmark">Anonymous (TBD)</a><sup>1</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Earth</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://github.com/MMPB-Benchmark"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/stackadd/MMPB" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <font size="5">
+      <div class="has-text-centered">
+        <p>🔥<b>What's New</b></p>
+      </div>
+    </font>
+    <font size="4">
+      <table width="75%" align="center" border="0" cellspacing="0" cellpadding="10"><tbody>
+        <tr>
+          <td>
+            <div style="height: 150px; overflow: auto;">
+              <ul>  
+              <div style="white-space: nowrap;">
+                [2025.05.14] 🚀 Huggingface Dataset and evaluation code are available!
+              </div>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </font>
+  </div>
+</section>
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the first Visual-Question Answering (VQA) Benchmark for evaluating Vision-Lanugage assistant Models (VLMs) on Personalization!
+          </p>
+          <p>
+            MMPB comprises 10k image-query pairs and includes 111 personalizable concepts across four categories: Human, Animal, Object, and Character, with the human category enriched with preference-grounded queries. 
+            We structure personalization into three main task types: Awareness, Appropriateness, and Coherency
+            
+          </p>
+          <p>
+            Our findings indicate that most VLMs (including some closed-source models) struggle with personalization, particularly in maintaining consistency over dialogue, handling user preferences, and adapting to visual cues. Our analysis reveals that the challenges in VLM personalization (such as refusal behaviors and long-context forgetting) highlight substantial room for improvement. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section" id="Table">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">Overview of MMPB</span></h2>
+        <div class="content">
+          Examples of personalized queries across task types and representative failure cases of recent VLMs.<br>
+          We highlight the lack of VQA benchmarks for effectively and extensively evaluating VLMs.
+          <centering>
+            <div style="text-align: center;">
+              <img id="teaser" width="60%" src="images/mot_fig-1.png">      
+            </div>
+          </centering>
+          <br />(a) Some closed-source models exhibit evasive responses.  
+          <br />(b) Most VLMs fails to be personalized.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section" id="Table">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard"><span class="mathvista" style="vertical-align: middle">Evaluation of widely used VLMs on MMPB</span></h2>
+        <div class="content">
+
+          <centering>
+            <div style="text-align: center;">
+              <img id="teaser" width="60%" src="images/main0515-1.png">      
+            </div>
+          </centering>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+
+
+<section class="section" id="interactive-table">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Benchmarking Results</h2>
+
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All Models</button>
+          <button class="filter-btn" data-filter="open">Open Models</button>
+          <button class="filter-btn" data-filter="closed">Closed Models</button>
+          <input type="text" class="search-box" placeholder="Search models...">
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Model <button class="sort-btn" data-sort="name">↕</button></th>
+              <th>Text Turn 0 <button class="sort-btn" data-sort="text0">↕</button></th>
+              <th>Image Turn 0 <button class="sort-btn" data-sort="img0">↕</button></th>
+              <th>Text Turn 10 <button class="sort-btn" data-sort="text10">↕</button></th>
+              <th>Image Turn 10 <button class="sort-btn" data-sort="img10">↕</button></th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr data-category="open">
+              <td>Ovis2-34B</td>
+              <td>76.2</td>
+              <td>72.4</td>
+              <td>66.1</td>
+              <td>62.0</td>
+          </tr>
+  
+          <tr data-category="open">
+              <td>Qwen2-VL-72B</td>
+              <td>73.0</td>
+              <td>71.9</td>
+              <td>68.5</td>
+              <td>60.0</td>
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>InternVL2.5-38B-MPO</td>
+              <td>72.2</td>
+              <td>66.3</td>
+              <td>63.7</td>
+              <td>46.4</td>
+            
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>Ovis2-16B</td>
+              <td>71.5</td>
+              <td>71.7</td>
+              <td>64.6</td>
+              <td>64.9</td>
+
+          </tr>
+
+          <tr data-category="open">
+              <td>Qwen2.5-VL-72B</td>
+              <td>70.4</td>
+              <td>68.1</td>
+              <td>63.9</td>
+              <td>57.9</td>
+
+          </tr>
+
+  
+          <tr data-category="closed">
+              <td>Claude-3.5-Sonnet</td>
+              <td>68.8</td>
+              <td>40.4</td>
+              <td>54.3</td>
+              <td>41.6</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>DeepSeek-VL-V2</td>
+              <td>68.2</td>
+              <td>56.0</td>
+              <td>58.5</td>
+              <td>60.9</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>LLaVA-OV-72B</td>
+              <td>67.4</td>
+              <td>58.7</td>
+              <td>61.4</td>
+              <td>56.5</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>Qwen2-VL-7B</td>
+              <td>66.6</td>
+              <td>60.6</td>
+              <td>62.9</td>
+              <td>59.1</td>
+
+          </tr>
+
+  
+          <tr data-category="closed">
+              <td>Gemini-2.0-Flash</td>
+              <td>66.5</td>
+              <td>66.4</td>
+              <td>58.4</td>
+              <td>52.2</td>
+
+          </tr>
+
+  
+          <tr data-category="closed">
+              <td>Gemini-1.5-Flash</td>
+              <td>66.4</td>
+              <td>64.1</td>
+              <td>61.4</td>
+              <td>56.2</td>
+
+          </tr>
+
+  
+          <tr data-category="closed">
+              <td>GPT-4o</td>
+              <td>66.1</td>
+              <td>49.1</td>
+              <td>64.7</td>
+              <td>50.0</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>InternVL2.5-26B-MPO</td>
+              <td>65.0</td>
+              <td>58.3</td>
+              <td>58.1</td>
+              <td>53.3</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>Ovis2-8B</td>
+              <td>64.5</td>
+              <td>62.6</td>
+              <td>60.2</td>
+              <td>58.4</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>Qwen2.5-VL-7B</td>
+              <td>62.7</td>
+              <td>59.1</td>
+              <td>57.6</td>
+              <td>55.0</td>
+
+          </tr>
+
+          <tr data-category="open">
+              <td>InternVL2.5-8B-MPO</td>
+              <td>60.6</td>
+              <td>61.4</td>
+              <td>56.3</td>
+              <td>55.2</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>Llama-3.2-11B</td>
+              <td>60.2</td>
+              <td>57.2</td>
+              <td>56.9</td>
+              <td>56.7</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>InternVL2.5-7B-MPO</td>
+              <td>60.0</td>
+              <td>51.6</td>
+              <td>47.2</td>
+              <td>40.9</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>LLaVA-NeXT-34B</td>
+              <td>57.8</td>
+              <td>59.4</td>
+              <td>52.4</td>
+              <td>52.9</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>LLaVA-NeXT-32B</td>
+              <td>57.5</td>
+              <td>54.9</td>
+              <td>58.6</td>
+              <td>55.4</td>
+
+          </tr>
+
+          <tr data-category="open">
+              <td>LLaVA-OV-7B</td>
+              <td>56.8</td>
+              <td>49.8</td>
+              <td>52.7</td>
+              <td>49.1</td>
+
+          </tr>
+
+  
+          <tr data-category="open">
+              <td>LLaVA-1.5-13B</td>
+              <td>53.0</td>
+              <td>54.5</td>
+              <td>50.3</td>
+              <td>50.4</td>
+
+          </tr>
+  
+          <tr data-category="closed">
+              <td>Claude-3.7-Sonnet</td>
+              <td>37.0</td>
+              <td>15.8</td>
+              <td>33.6</td>
+              <td>14.6</td>
+
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Script for sort buttons
+  document.querySelectorAll('#interactive-table .sort-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const table = button.closest('.data-table');
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr')); // Get all rows, not excluding any
+      const sortType = button.getAttribute('data-sort');
+      let sortDirection = button.getAttribute('data-sort-direction') || 'desc'; // Default to desc
+
+      // Toggle sort direction
+      if (button.getAttribute('data-sort-active') === sortType) {
+        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortDirection = 'desc'; // Default to desc for a new column
+      }
+      button.setAttribute('data-sort-direction', sortDirection);
+      
+      // Reset active sort for other buttons
+      document.querySelectorAll('#interactive-table .sort-btn').forEach(btn => {
+        btn.removeAttribute('data-sort-active');
+        // Optionally reset visual indicator like arrow direction here
+      });
+      button.setAttribute('data-sort-active', sortType);
+
+
+      rows.sort((a, b) => {
+        let aValue, bValue;
+        let columnIndex;
+
+        switch (sortType) {
+          case 'name': 
+            columnIndex = 0;
+            aValue = a.cells[columnIndex].textContent.trim().toLowerCase();
+            bValue = b.cells[columnIndex].textContent.trim().toLowerCase();
+            if (sortDirection === 'asc') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return bValue.localeCompare(aValue);
+            }
+          case 'text0': columnIndex = 1; break;
+          case 'img0': columnIndex = 2; break;
+          case 'text10': columnIndex = 3; break;
+          case 'img10': columnIndex = 4; break;
+          default: columnIndex = 0; // Should not happen
+        }
+        
+        // For numeric columns
+        aValue = parseFloat(a.cells[columnIndex].textContent);
+        bValue = parseFloat(b.cells[columnIndex].textContent);
+
+        if (sortDirection === 'asc') {
+            return aValue - bValue;
+        } else {
+            return bValue - aValue;
+        }
+      });
+
+      tbody.innerHTML = ''; // Clear existing content
+      rows.forEach(row => {
+        tbody.appendChild(row); // Append sorted rows
+      });
+    });
+  });
+  
+  // Script for filter buttons
+  document.querySelectorAll('#interactive-table .filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('#interactive-table .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+      
+      const filter = button.getAttribute('data-filter');
+      const interactiveTable = document.getElementById('interactive-table');
+      const rows = interactiveTable.querySelectorAll('.data-table tbody tr');
+      const searchBox = interactiveTable.querySelector('.search-box');
+      const searchTerm = searchBox.value.toLowerCase();
+      
+      rows.forEach(row => {
+        const category = row.getAttribute('data-category');
+        const modelName = row.cells[0].textContent.toLowerCase();
+        
+        const matchesFilter = (filter === 'all' || (category && category.includes(filter)));
+        const matchesSearch = modelName.includes(searchTerm);
+
+        if (matchesFilter && matchesSearch) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+
+  // Script for search box
+  const searchBox = document.querySelector('#interactive-table .search-box');
+  searchBox.addEventListener('input', () => {
+    const searchTerm = searchBox.value.toLowerCase();
+    const interactiveTable = document.getElementById('interactive-table');
+    const rows = interactiveTable.querySelectorAll('.data-table tbody tr');
+    const activeFilterButton = interactiveTable.querySelector('.filter-btn.active');
+    const currentFilter = activeFilterButton ? activeFilterButton.getAttribute('data-filter') : 'all';
+    
+    rows.forEach(row => {
+      const modelName = row.cells[0].textContent.toLowerCase();
+      const category = row.getAttribute('data-category');
+
+      const matchesSearch = modelName.includes(searchTerm);
+      const matchesFilter = (currentFilter === 'all' || (category && category.includes(currentFilter)));
+
+      if (matchesSearch && matchesFilter) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+<a class="icon-link" href="https://github.com/MMPB-Benchmark" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://mathvista.github.io/">MathVista</a> and <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>
